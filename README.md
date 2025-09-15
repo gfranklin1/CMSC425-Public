@@ -6,9 +6,15 @@ Welcome to my repository for ```CMSC425 - Game Programming``` at the ```Universi
 
 ### Project 1: **A Small Unity Project**
 **Description:**  
+- Created a simple Unity scene featuring a 3D cube.
+- Implemented material swapping using C# and Unity’s input system.
+- Cube starts with a red material at position (0, 0, 0).
+- On each spacebar press:
+  - The cube's material toggles between red and blue.
+  - The cube's position alternates between (0, 0, 0) and (-2, 0, 0).
+- Utilized `MeshRenderer` and `Transform` components to control visuals and positioning.
 
 **Grade:** 
-
 
 ---
 
