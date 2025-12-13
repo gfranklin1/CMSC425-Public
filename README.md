@@ -57,20 +57,44 @@ Welcome to my repository for ```CMSC425 - Game Programming``` at the ```Universi
 
 ---
 
-### Project 4: ****  
+### Project 4: **Inchworm**  
 **Description:**  
-
+- Developed a robotic inchworm animation system in Unity using coroutines, input handling, and hierarchical transform manipulation.
+- Implemented a `Mover` script that animates a four-phase locomotion cycle:
+  1. Shrinking the body while moving the head downward toward the tail.
+  2. Flopping horizontally into the target square while extending the body.
+  3. Retracting the tail toward the head in the new square.
+  4. Rising back to a vertical stance with the body fully extended.
+- Designed a keystroke queue system using `List<KeyCode>` and `WaitUntil` to buffer arrow key inputs, enabling smooth sequential movement even with rapid key presses.
+- Utilized `Mathf.Lerp` and `Vector3.Lerp` within a coroutine loop to achieve frame-rate-independent, smooth scaling and translation of the inchworm's body and head.
+- Wrote a unified `Inch` coroutine that handles both growing and shrinking animations without conditional branching inside the loop, by computing start and end values beforehand based on the sign of the input parameter.
+- Managed parent/child transform relationships to correctly animate the head's local position and the body's local scale independently, preserving the visual integrity of the inchworm model.
+- Implemented boundary checking to prevent the inchworm from moving outside the dynamically generated checkerboard, ensuring valid grid positions based on configurable `rows` and `cols` parameters.
+- Exposed `secondsPerStep` in the Unity Inspector for runtime adjustment of animation speed without recompilation.
 
 **Grade:**
 
 ---
 
-### Project 5: ****
-**Description:**
+### Final Project: **Slime Game**
+**Description:**  
+- **NOTE: This project is located in another repository, as there are incremental updates.**
+- Collaborated with a team to design and develop a roguelike dungeon crawler in Unity where player progression is tied to knowledge rather than persistent gear or stats.
+- Architected a **procedural level generation system** that assembles hand-crafted cavern rooms and tunnels into a randomized maze-like cave network, ensuring unique layouts on every playthrough.
+- Implemented a **research and dissection system** that allows players to study enemy corpses, unlocking permanent attack and defense bonuses against specific enemy types stored in a persistent bestiary.
+- Developed a **stamina-based combat system** featuring light/heavy attacks, critical strikes, splash damage for certain weapons, and AI enemies with detection ranges and predictive aiming.
+- Created a **slime enemy type** with recursive splitting behavior—upon death, slimes divide into smaller variants with dynamically scaled stats.
+- Built a **tiered weapon system** supporting melee and ranged weapons across rarity levels (Rusty, Sharpened, Enchanted), each with distinct stat distributions encouraging loadout experimentation.
+- Designed and implemented a **consumable potion system** (Speed, Damage, Health boosts) with inventory management, random drops from enemies and destructible crates, and strategic resource allocation.
+- Developed a **tech tree UI** with branching upgrade nodes for stat customization, enabling varied build paths across runs.
+- Created a **bestiary UI** that displays accumulated research data including enemy lore, visual references, and combat bonuses gained through dissections.
+- Implemented **dynamic UI elements** including player health/stamina bars, floating damage numbers with color/size variations for critical hits, and semi-translucent interaction pop-ups for items and corpses.
+- Integrated **atmospheric lighting** using handheld torches and environmental light sources to create pockets of visibility and tension during exploration.
+- Added **audio feedback** with ambient music and contextual sound cues for combat, level-ups, and interactions to enhance player immersion.
+- Incorporated **special interactables** such as destructible crates, loot chests, and mimic enemies disguised as chests to add environmental hazards and rewards.
+- Designed a **death screen statistics display** showing run metrics (damage dealt, enemies killed by type, max level reached, etc.) to encourage replayability and personal goal-setting.
 
-
-**Grade:**
-
+**Grade:** 
 
 ---
 
